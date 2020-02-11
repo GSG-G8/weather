@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(https://images.all-free-download.com/images/graphiclarge/weather_background_cute_stylized_icons_decor_6835599.jpg);
+  background-position: center;
+  max-height: 100vw;
+  background-size: unset;
+  background-repeat: repeat;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0.3rem 0.3rem 0.3rem gray;
+  height: 20vh;
+}
+.header__title {
+  font-size: 5rem;
+font-weight: 500;
+}
+
+.form__input {
+  width: 40%;
+  height: 3rem;
+  border-radius: 5px;
+  border: 1px solid #333;
+  color: white;
+  padding: 0 1rem;
+}
+
+.form__button {
+  height: 3rem;
+  border: 1px solid rgb(219, 139, 66);
+  border-radius: 5px;
+  padding: 0 1rem;
+  background-color: rgb(219, 139, 66);
+}
+/* .main-content{
+    background-image: linear-gradient(
+      rgba(4, 28, 56, 0.418),
+      rgba(4, 28, 56, 0.418),
+      rgba(162, 195, 233, 0.712)
+    );
+    width:80vw;
+    margin:0 auto;
+    height: ;
+} */
+.footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: rgb(39, 68, 148);
+  padding: 0.3rem;
+  font-size: 1rem;
+  color: white;
+}

@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wither</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- <div class="main-content"> -->
+    <header class="header">
+      <h1 class="header__title">Weather</h1>
+    </header>
+    <main>
+      <form class="form" action="">
+        <label for="city">
+          <input
+            autofocus
+            placeholder="Enter City Name"
+            class="form__input"
+            list="city"
+            name="city"
+        /></label>
+        <datalist id="city">
+          <option value="a"> </option>
+          <option value="ab"> </option>
+          <option value="abc"> </option>
+          <option value="abcd"> </option>
+          <option value="abcdv"> </option>
+        </datalist>
+        <button class="form__button" type="submit">Go</button>
+      </form>
+      <div class="container"></div>
+    </main>
+    <!-- </div> -->
+    <footer class="footer">
+      © 2020 all right reseved for our team
+    </footer>
     <script src="./js/api.js"></script>
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
