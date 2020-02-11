@@ -1,4 +1,3 @@
-
 const urlweather = `https://api.openweathermap.org/data/2.5/weather?lat=31.5&lon=34.5&appid=${id}&units=metric`;
 const xhr = (url, callback) => {
   const xhr = new XMLHttpRequest();
