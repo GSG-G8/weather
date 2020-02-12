@@ -4,6 +4,8 @@ let urlweather = (cityName) => `https://api.openweathermap.org/data/2.5/weather?
 const submitBtn = document.querySelector('.form__button');
 const cityInput = document.querySelector('.form__input');
 const container = document.querySelector('.container');
+
+//function
 const cleardate = myNode => {
   while (myNode.firstChild) {
     myNode.removeChild(myNode.firstChild);
