@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/server.js",
+    "start": "node src/server.js",
     "k": "fuser -k 3030/tcp"
   },
   "repository": {
@@ -24,5 +24,7 @@
     "eslint-plugin-import": "^2.20.1",
     "nodemon": "^2.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
