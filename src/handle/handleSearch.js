@@ -5,10 +5,7 @@ const qs = require('querystring');
 
 module.exports = (request, response) => {
   const endpoint = request.url;
-  console.log(endpoint)
   const searchValue = qs.parse(endpoint.split('?')[1]);
-  console.log(endpoint)
-  
   const name = searchValue.q;
   const pathjson = path.join(__dirname, '..', 'city.json');
   fs.readFile(pathjson, (error, file) => {

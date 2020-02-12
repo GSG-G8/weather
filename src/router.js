@@ -11,8 +11,10 @@ const router = (request, response) => {
     handlePublic(request, response);
   } else if (endpoint.includes('/cities')) {
     handleSearch(request, response);
-  }else{
-    console.log(2222, request.url)
+  } else {
+    response.writeHead(404, { 'Content-Type': 'text/html' });
+    response.write('<h1>not found </h1>');
+    response.end();
   }
 };
 

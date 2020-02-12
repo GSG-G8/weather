@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/server.js",
-    "k": "fuser -k 4000/tcp"
+    "start": "nodemon src/server.js",
+    "k": "fuser -k 3030/tcp"
   },
   "repository": {
     "type": "git",
