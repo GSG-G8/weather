@@ -10,6 +10,7 @@ const mimeTypes = {
   ico: 'image/x-icon',
   png: 'image/png',
 };
+
 module.exports = (request, response) => {
   const endpoint = request.url;
   const ext = endpoint.split('.')[1];

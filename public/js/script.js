@@ -1,22 +1,34 @@
-
-let cityName = 'cairo';
-let urlweather = (cityName) => `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${id}&units=metric`;
+const city = document.getElementById('city');
+const id = '795a73f80e1447a92a70669a7c739689';
+const urlweather = (cityName) => `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${id}&units=metric`;
 const submitBtn = document.querySelector('.form__button');
-const cityInput = document.querySelector('.form__input');
 const container = document.querySelector('.container');
 
-///
-const cleardate = myNode => {
+const cleardate = (myNode) => {
   while (myNode.firstChild) {
     myNode.removeChild(myNode.firstChild);
   }
 };
-const weatherInfo = data => {
-  
 
-  const city = document.createElement('h1');
-  city.textContent = data.name;
-  container.appendChild(city);
+const autoComplete = (data) => {
+  data.forEach((element) => {
+    const option = document.createElement('option');
+    option.value = element;
+    city.appendChild(option);
+  });
+};
+
+const searchInput = document.getElementById('search');
+
+searchInput.addEventListener('keyup', () => {
+  cleardate(city);
+  request(`/cities?q=${searchInput.value}`, autoComplete);
+});
+
+const weatherInfo = (data) => {
+  const cityName = document.createElement('h1');
+  cityName.textContent = data.name;
+  container.appendChild(cityName);
 
   const descriptin = document.createElement('h2');
   descriptin.textContent = data.weather[0].description;
@@ -27,12 +39,8 @@ const weatherInfo = data => {
   container.appendChild(temp);
 };
 
-cityInput.addEventListener('onchange', e => {
- cityName = document.querySelector('.form__input').value;
-});
-
-submitBtn.addEventListener('click', e => {
+submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
   cleardate(container);
-  request(urlweather(cityInput.value), weatherInfo);
+  request(urlweather(searchInput.value), weatherInfo);
 });

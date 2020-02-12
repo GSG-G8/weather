@@ -1,11 +1,12 @@
-///
 const request = (url, callback) => {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = () => {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      let data = xhr.responseText;
-      data = JSON.parse(data);
-      callback(data);
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        let data = xhr.responseText;
+        data = JSON.parse(data);
+        callback(data);
+      }
     }
   };
   xhr.open('GET', url, true);

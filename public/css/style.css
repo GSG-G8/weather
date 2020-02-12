@@ -40,17 +40,8 @@ font-weight: 500;
   border-radius: 5px;
   padding: 0 1rem;
   background-color: rgb(219, 139, 66);
+  cursor: pointer;
 }
-/* .main-content{
-    background-image: linear-gradient(
-      rgba(4, 28, 56, 0.418),
-      rgba(4, 28, 56, 0.418),
-      rgba(162, 195, 233, 0.712)
-    );
-    width:80vw;
-    margin:0 auto;
-    height: ;
-} */
 .footer {
   position: fixed;
   bottom: 0;

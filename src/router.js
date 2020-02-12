@@ -9,8 +9,12 @@ const router = (request, response) => {
     handleMain(request, response);
   } else if (endpoint.includes('public')) {
     handlePublic(request, response);
-  } else if (endpoint.includes('/cities?q=')) {
+  } else if (endpoint.includes('/cities')) {
     handleSearch(request, response);
+  } else {
+    response.writeHead(404, { 'Content-Type': 'text/html' });
+    response.write('<h1>not found </h1>');
+    response.end();
   }
 };
 
