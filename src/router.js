@@ -9,8 +9,10 @@ const router = (request, response) => {
     handleMain(request, response);
   } else if (endpoint.includes('public')) {
     handlePublic(request, response);
-  } else if (endpoint.includes('/cities?q=')) {
+  } else if (endpoint.includes('/cities')) {
     handleSearch(request, response);
+  }else{
+    console.log(2222, request.url)
   }
 };
 
