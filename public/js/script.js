@@ -1,8 +1,7 @@
 const city = document.getElementById('city');
 const id = '795a73f80e1447a92a70669a7c739689';
-const apiKey =process.env.API_KEY;
-console.log(apiKey)
-const urlweather = (cityName) => `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+// const apiKey =process.env.API_KEY;
+const urlweather = (cityName) => `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${id}&units=metric`;
 const submitBtn = document.querySelector('.form__button');
 const container = document.querySelector('.container');
 
