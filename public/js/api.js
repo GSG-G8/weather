@@ -1,4 +1,4 @@
-
+///
 const request = (url, callback) => {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = () => {

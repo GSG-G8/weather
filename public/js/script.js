@@ -5,7 +5,7 @@ const submitBtn = document.querySelector('.form__button');
 const cityInput = document.querySelector('.form__input');
 const container = document.querySelector('.container');
 
-
+///
 const cleardate = myNode => {
   while (myNode.firstChild) {
     myNode.removeChild(myNode.firstChild);
