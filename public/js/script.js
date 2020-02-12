@@ -1,4 +1,4 @@
-const id = '795a73f80e1447a92a70669a7c739689';
+
 let cityName = 'cairo';
 let urlweather = (cityName) => `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${id}&units=metric`;
 const submitBtn = document.querySelector('.form__button');
