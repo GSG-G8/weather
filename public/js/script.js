@@ -1,4 +1,3 @@
-
 let cityName = 'cairo';
 let urlweather = (cityName) => `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${id}&units=metric`;
 const submitBtn = document.querySelector('.form__button');
