@@ -6,6 +6,8 @@ const request = (url, callback) => {
         let data = xhr.responseText;
         data = JSON.parse(data);
         callback(data);
+      } else {
+        console.log(xhr.status);
       }
     }
   };
