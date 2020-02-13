@@ -6,12 +6,9 @@ const request = (url, callback) => {
         let data = xhr.responseText;
         data = JSON.parse(data);
         callback(data);
-      } else if (xhr.status === 500) {
-        Response.writeHead(500, { 'Content-Type': 'text/html' });
-        Response.end('<h1>server error</h1>');
+      }
       } else {
-        Response.writeHead(404, { 'Content-Type': 'text/html' });
-        Response.end('<h1>page not found</h1>');
+        console.log(xhr.status);
       }
     }
   };
