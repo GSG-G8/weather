@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const qs = require('querystring');
+const filter = require('./logic');
 
 
 module.exports = (request, response) => {
@@ -14,7 +15,7 @@ module.exports = (request, response) => {
       response.end('<h1>Internal Server Error</h1>');
     } else {
       const data = JSON.parse(file);
-      const result = data.filter((e) => e.toLowerCase().startsWith(name)).slice(0, 20);
+      const result = filter(data, name);
       response.end(JSON.stringify(result));
     }
   });
