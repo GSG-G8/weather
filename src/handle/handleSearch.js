@@ -16,7 +16,6 @@ module.exports = (request, response) => {
     } else {
       const data = JSON.parse(file);
       const result = filter(data, name);
-      // const result = data.filter((e) => e.toLowerCase().startsWith(name)).slice(0, 20);
       response.end(JSON.stringify(result));
     }
   });
